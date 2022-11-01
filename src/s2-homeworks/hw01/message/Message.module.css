@@ -1,17 +1,47 @@
 .message {
-
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
 }
 
 .imageAndText {
-
+    padding: 10px;
+    display: flex;
+    max-width: 50%;
+    justify-content: flex-end;
 }
 
 .imageAndText img {
-
+    align-self: flex-end;
+    order: 2;
+    width: 48px;
+    height: 48px;
 }
 
-.text {
+.message .angle {
+    align-self: flex-end;
+    width: 15px;
+    height: 15px;
+    order: 1;
+    /*background: radial-gradient(circle at 0 0,  rgba(0,0,0) 15px)  #0066CC;*/
+    /*background: radial-gradient(circle at 0 0, #0066CC 15px, #0066CC 0);*/
+    /*background: radial-gradient(circle at 15px 0, #0066CC 15px, #0066CC 0);*/
+    /*background: radial-gradient(circle at 0 15px, #0066CC 15px, #0066CC 0);*/
+    /*background: radial-gradient(circle at 0 0, #0066CC 15px, #0066CC 15px);*/
 
+    background: radial-gradient(circle at 15px 0, #fff 15px, rgba(0, 102, 204, 0.6) 0);
+}
+
+
+.text {
+    padding: 10px;
+    max-width: 84%;
+    min-height: 60px;
+    background-color: rgba(0, 102, 204, 0.6);
+    border-radius: 10px 10px 0 10px;
+    word-break: break-word;
 }
 
 .text:after {
@@ -19,13 +49,17 @@
 }
 
 .name {
-
+    text-align: end;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .messageText {
-
+    text-align: start;
 }
 
 .time {
-
+    margin: 5px 20px;
+    font-weight: 600;
+    font-size: 10px;
 }
