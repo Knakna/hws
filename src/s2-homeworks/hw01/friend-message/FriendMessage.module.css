@@ -21,6 +21,7 @@
     width: 15px;
     height: 15px;
     background: radial-gradient(circle at 0 0, #fff 15px, rgba(0, 102, 204, 0.1) 0);
+    flex-shrink: 0;
 }
 
 
@@ -50,4 +51,11 @@
     margin: 5px 20px;
     font-weight: 600;
     font-size: 10px;
+}
+
+
+@media (max-width: 778px) {
+    .friendImageAndText {
+        max-width: max-content;
+    }
 }

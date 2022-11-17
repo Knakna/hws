@@ -25,6 +25,7 @@
     width: 15px;
     height: 15px;
     order: 1;
+    flex-shrink: 0;
     /*background: radial-gradient(circle at 0 0,  rgba(0,0,0) 15px)  #0066CC;*/
     /*background: radial-gradient(circle at 0 0, #0066CC 15px, #0066CC 0);*/
     /*background: radial-gradient(circle at 15px 0, #0066CC 15px, #0066CC 0);*/
@@ -62,4 +63,10 @@
     margin: 5px 20px;
     font-weight: 600;
     font-size: 10px;
+}
+
+@media (max-width: 778px) {
+    .imageAndText {
+        max-width: max-content;
+    }
 }
