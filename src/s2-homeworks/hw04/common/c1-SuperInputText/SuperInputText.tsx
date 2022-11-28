@@ -66,7 +66,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
             />
             <span
                 id={id ? id + '-span' : undefined}
-                className={finalSpanClassName}
+                className={finalSpanClassName }
             >
                 {error}
             </span>

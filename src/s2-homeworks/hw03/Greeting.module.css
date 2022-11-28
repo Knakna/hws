@@ -20,6 +20,7 @@
     padding: 8px 12px;
 
     border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
     width: 372px;
     height: 36px;
 
@@ -28,6 +29,8 @@
 }
 
 .input:focus {
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    outline: none;
 }
 
 .errorInput {
@@ -37,6 +40,7 @@
     width: 372px;
     height: 36px;
     border: 1px solid #CC0000;
+    border-radius: 5px;
 }
 
 .button {

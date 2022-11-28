@@ -21,3 +21,7 @@
     flex-direction: column;
     gap: 36px;
 }
+
+.test {
+    border-bottom-color: #00cc22;
+}

@@ -1,6 +1,7 @@
 import React from 'react'
 import s2 from '../../s1-main/App.module.css'
 import Stand from './Stand'
+import s from './HW4.module.css'
 
 /*
 * 1 - понять (и простить) SuperInputText
@@ -11,7 +12,7 @@ import Stand from './Stand'
 
 const HW4 = () => {
     return (
-        <div id={'hw4'}>
+        <div id={'hw4'} className={s.HW4}>
             <div className={s2.hwTitle}>Homework #4</div>
             {/*демонстрация возможностей компонент:*/}
             <div className={s2.hw}>

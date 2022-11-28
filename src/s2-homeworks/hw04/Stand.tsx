@@ -10,6 +10,11 @@ const Stand = () => {
 
     const [stateForAllCheckboxes, setChecked] = useState<boolean>(false)
 
+    // const onEnter = () => {
+    //     alert('ddd')
+    // }
+
+
     return (
         <div id={'hw4-stand'} className={s.stand}>
             <div className={s.inputs}>
@@ -19,6 +24,7 @@ const Stand = () => {
                         id={'hw4-super-input-like-old'}
                         value={stateForAllInputs}
                         onChange={(e) => setValue(e.currentTarget.value)}
+                        className={s.test}
                     />
                 </div>
                 {/*инпут с ошибкой:*/}
@@ -27,7 +33,7 @@ const Stand = () => {
                         id={'hw4-super-input-with-error'}
                         value={stateForAllInputs}
                         onChangeText={setValue}
-                        error={error}
+                        error={ error }
                         onEnter={() => {
                             setError(
                                 stateForAllInputs.trim()
@@ -36,9 +42,13 @@ const Stand = () => {
                             )
                             setValue('')
                         }}
+                        className={s.test}
                     />
                 </div>
             </div>
+            {/*<SuperInputText*/}
+            {/*onEnter={onEnter}*/}
+            {/*/>*/}
 
             <div className={s.buttons}>
                 {/*обычная кнопка:*/}
