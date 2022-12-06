@@ -1,25 +1,132 @@
-.button {
+@keyframes blink {
+    0% {
+        left: -130%;
+    }
+    100% {
+        left: 130%;
+    }
 }
 
+
+.button {
+    position: relative;
+    margin: 10px;
+    padding: 5px;
+    overflow: hidden;
+    cursor: pointer;
+
+    width: 132px;
+    height: 30px;
+
+    background: #0066CC;
+    border-radius: 3px;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+
+    color: #FFFFFF;
+    font-family: 'Montserrat';
+}
+
+.button::after {
+    display: block;
+    content: '';
+    position: absolute;
+
+    left: -130%;
+    top: 0;
+    height: 100%;
+    width: 20%;
+
+    transform: skew(45deg);
+
+    background: #fff;
+    opacity: 0.7;
+    z-index: 20;
+}
+
+/*.button:hover {*/
+/*    color:  #0080FF;*/
+/*}*/
+
+.button:hover::after {
+    animation: blink 0.35s ease;
+}
+
+.button:hover::after {
+    display: block;
+    content: '';
+    position: absolute;
+
+    left: -100vw;
+    top: 0;
+    height: 100vh;
+    width: 300vw;
+
+    background: #fff;
+    opacity: 0.2;
+    z-index: 10;
+}
+
+.button:focus {
+    outline: #991199 solid 1px;
+}
+
+.button:active {
+    background: #0059B2;
+}
+
+
 .disabled {
+    background: #004D99;
+    opacity: 0.5;
+    cursor: not-allowed;
+    color: #002E5C;
+}
+
+.disabled::after {
+    z-index: -2;
+}
+
+.disabled::before {
+    z-index: -2;
 }
 
 .secondary {
+    width: 176px;
+    height: 30px;
+
+    border: 1px solid #0066CC;
+    color: #0066CC;
+    background: #fff;
 }
 
 .default {
+    /*background: #003300;*/
+    /*color: #991199;*/
+    /*outline: none;*/
+
+    /*width: 132px;*/
+    /*height: 30px;*/
+
+    /*background: #0066CC;*/
+    /*border-radius: 3px;*/
 }
 
 .red {
+    background: #CC1439;
 }
 
 .default:hover {
 }
 
 .red:hover {
+    background: #FF1A47;
 }
 
 .secondary:hover {
+    background: #E5F0FA;
+    border: 1px solid #0066CC;
 }
 
 
@@ -27,9 +134,11 @@
 }
 
 .secondary:active {
+    background: #C9E5FF;;
 }
 
 .red:active {
+    background: #B21232;
 }
 
 .button:disabled {

@@ -14,6 +14,11 @@ const Stand = () => {
     //     alert('ddd')
     // }
 
+    const onChangeHandler = (value: string) => {
+        if (error) setError('');
+        setValue(value);
+    }
+
 
     return (
         <div id={'hw4-stand'} className={s.stand}>
@@ -24,7 +29,7 @@ const Stand = () => {
                         id={'hw4-super-input-like-old'}
                         value={stateForAllInputs}
                         onChange={(e) => setValue(e.currentTarget.value)}
-                        className={s.test}
+                        // className={s.test}
                     />
                 </div>
                 {/*инпут с ошибкой:*/}
@@ -32,8 +37,8 @@ const Stand = () => {
                     <SuperInputText
                         id={'hw4-super-input-with-error'}
                         value={stateForAllInputs}
-                        onChangeText={setValue}
-                        error={ error }
+                        onChangeText={onChangeHandler}
+                        error={error}
                         onEnter={() => {
                             setError(
                                 stateForAllInputs.trim()
@@ -67,13 +72,13 @@ const Stand = () => {
                 <div>
                     <SuperButton
                         id={'hw4-super-button-disabled'}
-                        xType={'red'}
+                        // xType={'red'}
                         disabled
                     >
                         disabled
                     </SuperButton>
                 </div>
-                {/*задизэйбленная кнопка:*/}
+                {/*вторая кнопка:*/}
                 <div>
                     <SuperButton
                         id={'hw4-super-button-secondary'}

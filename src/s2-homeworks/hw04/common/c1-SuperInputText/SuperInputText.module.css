@@ -1,4 +1,6 @@
 .input:focus {
+    outline: none;
+    border: 1px solid #212A34;
 }
 
 .input {
@@ -15,6 +17,8 @@
 }
 
 .superInput {
+    background: #fdf7f7;
+    color: #424345;
 
 }
 

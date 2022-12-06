@@ -1,7 +1,9 @@
 .stand {
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
 }
 
 .inputs {
@@ -23,5 +25,7 @@
 }
 
 .test {
-    border-bottom-color: #00cc22;
+    /*border-bottom-color: #00cc22!important;*/
+    /*background: red;*/
+    font-size: 30px;
 }
